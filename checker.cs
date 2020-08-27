@@ -13,12 +13,7 @@ class Checker
         return false;
         return true;
     }
-    static void ExpectTrue(bool expression) {
-        if(!expression) {
-            Console.WriteLine("Expected true, but got false");
-            Environment.Exit(1);
-        }
-    }
+    
     static void ExpectFalse(bool expression) {
         if(expression) {
             Console.WriteLine("Expected false, but got true");
