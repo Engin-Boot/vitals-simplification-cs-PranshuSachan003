@@ -1,6 +1,5 @@
 using System;
 using System.Diagnostics;
-
 class Checker
 {
     public static void Main()
@@ -12,13 +11,6 @@ class Checker
         if( check_bpm || check_spo2 || check_respRate)
         return false;
         return true;
-    }
-    
-    static void ExpectFalse(bool expression) {
-        if(expression) {
-            Console.WriteLine("Expected false, but got true");
-            Environment.Exit(1);
         }
-    }
     }
 }
