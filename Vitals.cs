@@ -2,8 +2,6 @@ using System;
 using System.Diagnostics;
 class Vital
 {
-public static void Main()
-    {
     static bool vitalsAreOk(float bpm, float spo2, float respRate) {
         var check_bpm = (bpm < 70 || bpm > 150);
         var check_spo2 = (spo2 < 90);
@@ -11,6 +9,5 @@ public static void Main()
         if( check_bpm || check_spo2 || check_respRate)
         return false;
         return true;
-    }
   }
 }
