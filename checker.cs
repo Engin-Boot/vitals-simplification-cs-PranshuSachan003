@@ -4,12 +4,6 @@ class Checker
 {
     public static void Main()
     {
-        static bool RESPRATEisOk(float respRate)
-    {
-        if(respRate<30||respRate>95)
-            return false;
-        return true;   
-    }
     static bool vitalsAreOk(float bpm, float spo2, float respRate) {
         var check_bpm = BPMisOk(bpm);
         var check_spo2 = SPO2isOk(spo2);
