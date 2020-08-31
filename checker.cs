@@ -10,6 +10,7 @@ class Checker
         if( check_bpm || check_spo2 || check_respRate)
         return false;
         return true;
+        }
      }
      static void ExpectTrue(bool expression) {
         if(!expression) {
