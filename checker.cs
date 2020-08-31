@@ -4,12 +4,6 @@ class Checker
 {
     public static void Main()
     {
-        static bool SPO2isOk(float spo2)
-    {
-        if(spo2<90)
-            return false;
-         return true;   
-    }
         static bool RESPRATEisOk(float respRate)
     {
         if(respRate<30||respRate>95)
