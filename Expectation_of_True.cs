@@ -1,6 +1,6 @@
 using System;
 using System.Diagnostics;
-class ExpectTrue
+class ExpectOfTrue
 {
 
  static void ExpectTrue(bool expression) {
