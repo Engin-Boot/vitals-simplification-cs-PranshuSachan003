@@ -4,7 +4,7 @@ class Checker
 {
     public static void Main()
     {
-    static bool BPMAisOk(float bpm)
+    static bool BPMisOk(float bpm)
     {
         if(bpm<70||bpm>150)
             return false;
