@@ -4,8 +4,26 @@ class Checker
 {
     public static void Main()
     {
+    static bool BPMAisOk(float bpm)
+    {
+        if(bpm<70||bpm>150)
+            return false;
+    }
+        static bool SPO2isOk(float spo2)
+    {
+        if(spo2<90)
+            return false;
+    }
+        static bool RESPRATEisOk(float respRate)
+    {
+        if(respRate<30||respRate>95)
+            return false;
+    }
     static bool vitalsAreOk(float bpm, float spo2, float respRate) {
-        if(bpm<70||bpm>150||spo2<90||respRate<30||respRate>95)
+        var check_bpm = BPMisOk(bpm);
+        var check_spo2 = SPO2isOk(spo2);
+        var check_respRate = RESPRATEisOk(respRate);
+        if(check_bpm || check_spo2 || check_respRate)
             return false;
         return true;
         }
