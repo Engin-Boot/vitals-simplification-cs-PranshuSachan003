@@ -5,12 +5,9 @@ class Checker
     public static void Main()
     {
     static bool vitalsAreOk(float bpm, float spo2, float respRate) {
-        var check_bpm = (bpm >70 && bpm < 150);
-        var check_spo2 = (spo2 > 90);
-        var check_respRate = (respRate > 30 && respRate < 95);
-        if( check_bpm && check_spo2 && check_respRate)
+        if(bpm<70||bpm>150||spo2<90||respRate<30||respRate>95)
+            return false;
         return true;
-        return false;
         }
      static void ExpectTrue(bool expression) {
         if(!expression) {
