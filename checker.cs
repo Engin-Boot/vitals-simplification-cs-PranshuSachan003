@@ -11,7 +11,6 @@ class Checker
         if( check_bpm || check_spo2 || check_respRate)
         return false;
         return true;
-        }
     }
      static void ExpectTrue(bool expression) {
         if(!expression) {
@@ -42,5 +41,6 @@ class Checker
         ExpectFalse(vitalsAreOk(150, 90, 95));
         Console.WriteLine("All ok");
         return 0;
+          }
     }
 }
