@@ -4,12 +4,6 @@ class Checker
 {
     public static void Main()
     {
-    static bool BPMisOk(float bpm)
-    {
-        if(bpm<70||bpm>150)
-            return false;
-        return true;
-    }
         static bool SPO2isOk(float spo2)
     {
         if(spo2<90)
