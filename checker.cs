@@ -2,13 +2,28 @@ using System;
 using System.Diagnostics;
 class Checker
 {
+    bool BpmIsOk(float bpm)
+    {
+        if(bpm < 70 || bpm > 150)
+            return false;
+        return true;
+    }
+    bool Spo2IsOk(float spo2)
+    {
+        if(spo2 < 90)
+            return false;
+        return true;
+    }
+    bool RespRateIsOk(float respRate)
+    {
+        if(respRate < 30 || respRate > 95)
+            return false;
+        return true;
+    }
     public static void Main()
     {
     static bool vitalsAreOk(float bpm, float spo2, float respRate) {
-        var check_bpm = (bpm < 70 || bpm > 150);
-        var check_spo2 = (spo2 < 90);
-        var check_respRate = (respRate < 30 || respRate > 95);
-        if( check_bpm || check_spo2 || check_respRate)
+        if( BpmIsOk(bpm) || Spo2IsOk(spo2) || RespRateIsOk(respRate) )
         return false;
         return true;
         }
