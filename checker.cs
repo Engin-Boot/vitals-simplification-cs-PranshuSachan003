@@ -36,9 +36,10 @@ class Checker
     public static void Main()
     {
     static bool vitalsAreOk(float bpm, float spo2, float respRate) {
-        if( bpmIsOk(bpm) && spo2IsOk(spo2 )&& respRateIsOk(respRate) )
-            return false;
-        return true;
+        var = bpmIsOk(bpm) && spo2IsOk(spo2);
+        if( var && respRateIsOk(respRate) )
+            return true;
+        return false;
         }
   }
 }
