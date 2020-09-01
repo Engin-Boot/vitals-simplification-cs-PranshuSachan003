@@ -33,10 +33,16 @@ class Checker
             Environment.Exit(1);
         }
     }
+    static bool bpmAndspo2AreOk(float bpm, float spo2)
+    {
+        if(bpmIsOk(bpm) && spo2IsOk(spo2))
+            return true;
+        return false;
+    }
     public static void Main()
     {
     static bool vitalsAreOk(float bpm, float spo2, float respRate) {
-        if(  bpmIsOk(bpm) && spo2IsOk(spo2) && respRateIsOk(respRate) )
+        if( bpmAndspo2AreOk(bpm,spo2) && respRateIsOk(respRate) )
             return true;
         return false;
         }
