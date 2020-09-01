@@ -1,5 +1,8 @@
 using System;
 using System.Diagnostics;
+    
+class Checker
+{
     static bool bpmIsOk(float bpm)
     {
         if(bpm<70||bpm>150)
@@ -18,9 +21,6 @@ using System.Diagnostics;
             return false;
         return true;
     }
-
-class Checker
-{
     public static void Main()
     {
     static bool vitalsAreOk(float bpm, float spo2, float respRate) {
