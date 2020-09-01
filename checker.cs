@@ -38,7 +38,7 @@ class Checker
     static bool vitalsAreOk(float bpm, float spo2, float respRate) {
         if( bpmIsOk(bpm)|| spo2IsOk(spo2)||respRateIsOk(respRate) )
             return false;
-        return true;
         }
+        return true;
   }
 }
