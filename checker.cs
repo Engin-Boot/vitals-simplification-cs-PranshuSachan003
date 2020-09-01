@@ -1,32 +1,23 @@
 using System;
 using System.Diagnostics;
-class Bpm
-{
     static bool bpmIsOk(float bpm)
     {
         if(bpm<70||bpm>150)
             return false;
         return true;
     }
-}
-class Spo2
-{
     static bool spo2IsOk(float spo2)
     {
         if(spo2<90)
             return false;
         return true;
     }
-}
-class RespRate
-{
     static bool respRateIsOk(float respRate)
     {
         if(respRate<30||respRate>95)
             return false;
         return true;
     }
-}
 
 class Checker
 {
