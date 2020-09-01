@@ -21,14 +21,7 @@ class Checker
             return false;
         return true;
     }
-    public static void Main()
-    {
-    static bool vitalsAreOk(float bpm, float spo2, float respRate) {
-        if( bpmIsOk(bpm)|| spo2IsOk(spo2)||respRateIsOk(respRate) )
-            return false;
-        return true;
-        }
-     static void ExpectTrue(bool expression) {
+    static void ExpectTrue(bool expression) {
         if(!expression) {
             Console.WriteLine("Expected true, but got false");
             Environment.Exit(1);
@@ -40,5 +33,12 @@ class Checker
             Environment.Exit(1);
         }
     }
+    public static void Main()
+    {
+    static bool vitalsAreOk(float bpm, float spo2, float respRate) {
+        if( bpmIsOk(bpm)|| spo2IsOk(spo2)||respRateIsOk(respRate) )
+            return false;
+        return true;
+        }
   }
 }
