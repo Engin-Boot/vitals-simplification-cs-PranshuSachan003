@@ -1,16 +1,24 @@
 using System;
 using System.Diagnostics;
-
+    
 class Checker
 {
-    static bool vitalsAreOk(float bpm, float spo2, float respRate) {
-        if(bpm < 70 || bpm > 150) {
+    static bool bpmIsOk(float bpm,float minBpm,float maxBpm)
+    {
+        if(bpm<minBpm||bpm>maxBpm)
             return false;
-        } else if(spo2 < 90) {
+        return true;
+    }
+    static bool spo2IsOk(float spo2,float minSpo2)
+    {
+        if(spo2<minSpo2)
             return false;
-        } else if(respRate < 30 || respRate > 95) {
+        return true;
+    }
+    static bool respRateIsOk(float respRate,float minRespRate,float maxRespRate)
+    {
+        if(respRate<minRespRate||respRate>maxRespRate)
             return false;
-        }
         return true;
     }
     static void ExpectTrue(bool expression) {
@@ -25,10 +33,18 @@ class Checker
             Environment.Exit(1);
         }
     }
-    static int Main() {
-        ExpectTrue(vitalsAreOk(100, 95, 60));
-        ExpectFalse(vitalsAreOk(40, 91, 92));
-        Console.WriteLine("All ok");
-        return 0;
+    static bool bpmAndSpo2AreOk(float bpm, float spo2)
+    {
+        if(bpmIsOk(bpm,70,150) && spo2IsOk(spo2,90))
+            return true;
+        return false;
     }
+    public static void Main()
+    {
+    static bool vitalsAreOk(float bpm, float spo2, float respRate) {
+        if( bpmAndSpo2AreOk(bpm,spo2) && respRateIsOk(respRate,30,95) )
+            return true;
+        return false;
+        }
+  }
 }
