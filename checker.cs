@@ -3,21 +3,21 @@ using System.Diagnostics;
     
 class Checker
 {
-    static bool bpmIsOk(float bpm)
+    static bool bpmIsOk(float bpm,float minBpm,float maxBpm)
     {
-        if(bpm<70||bpm>150)
+        if(bpm<minBpm||bpm>maxBpm)
             return false;
         return true;
     }
-    static bool spo2IsOk(float spo2)
+    static bool spo2IsOk(float spo2,float minSpo2)
     {
-        if(spo2<90)
+        if(spo2<minSpo2)
             return false;
         return true;
     }
-    static bool respRateIsOk(float respRate)
+    static bool respRateIsOk(float respRate,float minRespRate,float maxRespRate)
     {
-        if(respRate<30||respRate>95)
+        if(respRate<minRespRate||respRate>maxRespRate)
             return false;
         return true;
     }
@@ -33,16 +33,16 @@ class Checker
             Environment.Exit(1);
         }
     }
-    static bool bpmAndspo2AreOk(float bpm, float spo2)
+    static bool bpmAndSpo2AreOk(float bpm, float spo2)
     {
-        if(bpmIsOk(bpm) && spo2IsOk(spo2))
+        if(bpmIsOk(bpm,70,150) && spo2IsOk(spo2,90))
             return true;
         return false;
     }
     public static void Main()
     {
     static bool vitalsAreOk(float bpm, float spo2, float respRate) {
-        if( bpmAndspo2AreOk(bpm,spo2) && respRateIsOk(respRate) )
+        if( bpmAndSpo2AreOk(bpm,spo2) && respRateIsOk(respRate,30,95) )
             return true;
         return false;
         }
